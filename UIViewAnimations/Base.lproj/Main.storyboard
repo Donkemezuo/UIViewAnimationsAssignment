@@ -18,22 +18,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jp6-XK-6hg">
-                                <rect key="frame" x="80" y="40" width="215" height="147"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="duckk" translatesAutoresizingMaskIntoConstraints="NO" id="Jp6-XK-6hg">
+                                <rect key="frame" x="130" y="80" width="115" height="107"/>
                             </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="f2x-hr-4mO">
+                                <rect key="frame" x="9" y="207" width="357" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="X34-Sn-gxB"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1H8-is-Unj">
+                                <rect key="frame" x="116" y="402" width="139" height="209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="LionelMessi"/>
+                                <connections>
+                                    <action selector="imageTransition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cal-hT-dKD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lionel Messi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpC-97-ewX">
+                                <rect key="frame" x="11" y="357" width="353" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Jp6-XK-6hg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="7qb-yU-Gbb"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Jp6-XK-6hg" secondAttribute="bottom" constant="480" id="ESQ-kF-E0v"/>
-                            <constraint firstItem="Jp6-XK-6hg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Fxv-b6-JvI"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jp6-XK-6hg" secondAttribute="trailing" constant="80" id="IOA-z8-OPQ"/>
+                            <constraint firstItem="kpC-97-ewX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="11" id="2K2-Nn-QC5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kpC-97-ewX" secondAttribute="trailing" constant="11" id="2aT-rM-J2t"/>
+                            <constraint firstItem="f2x-hr-4mO" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="207" id="fsA-BF-CWg"/>
+                            <constraint firstItem="kpC-97-ewX" firstAttribute="top" secondItem="f2x-hr-4mO" secondAttribute="bottom" constant="120" id="h9L-Gh-Xgy"/>
+                            <constraint firstItem="f2x-hr-4mO" firstAttribute="leading" secondItem="kpC-97-ewX" secondAttribute="leading" id="onk-e3-Gtm"/>
+                            <constraint firstItem="f2x-hr-4mO" firstAttribute="trailing" secondItem="kpC-97-ewX" secondAttribute="trailing" id="rJq-c8-22O"/>
+                            <constraint firstItem="f2x-hr-4mO" firstAttribute="centerX" secondItem="Jp6-XK-6hg" secondAttribute="centerX" id="x1c-h5-6nM"/>
+                            <constraint firstItem="f2x-hr-4mO" firstAttribute="top" secondItem="Jp6-XK-6hg" secondAttribute="bottom" constant="20" id="zzt-cY-C0V"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="duckImage" destination="Jp6-XK-6hg" id="4LW-Y1-55H"/>
+                        <outlet property="playerImage" destination="1H8-is-Unj" id="Gaz-06-yZ3"/>
+                        <outlet property="playerName" destination="kpC-97-ewX" id="2Iw-Z3-OYF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="LionelMessi" width="139.19999694824219" height="209.27999877929688"/>
+        <image name="duckk" width="183" height="236"/>
+    </resources>
 </document>
